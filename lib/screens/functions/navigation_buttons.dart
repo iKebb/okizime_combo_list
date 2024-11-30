@@ -1,4 +1,5 @@
 import 'package:ab_final_entregable/screens/functions/full_screen_image.dart';
+import 'package:ab_final_entregable/screens/tl_chara_selection.dart';
 import 'package:flutter/material.dart';
 import 'package:ab_final_entregable/screens/type_lumina.dart'; // Importa TypeLumina
 import 'package:ab_final_entregable/screens/actress_again.dart'; // Importa ActressAgain
@@ -27,8 +28,7 @@ Widget buildExpandImageButtonTL(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) => const FullScreenImage(
-                imagePath:
-                    "assets/images/bgs/MBTL_Cover.png"), // Imagen de TypeLumina
+                imagePath: "assets/images/bgs/MBTL_Cover.png"),
           ),
         );
       },
@@ -36,7 +36,6 @@ Widget buildExpandImageButtonTL(BuildContext context) {
   );
 }
 
-// Método específico para expandir imagen en ActressAgain
 Widget buildExpandImageButtonAACC(BuildContext context) {
   return Positioned(
     top: 12,
@@ -48,8 +47,7 @@ Widget buildExpandImageButtonAACC(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) => const FullScreenImage(
-                imagePath:
-                    "assets/images/bgs/MBAACC_Cover.png"), // Imagen de ActressAgain
+                imagePath: "assets/images/bgs/MBAACC_Cover.png"),
           ),
         );
       },
@@ -57,7 +55,6 @@ Widget buildExpandImageButtonAACC(BuildContext context) {
   );
 }
 
-// Método para la flecha derecha de TypeLumina a ActressAgain
 Widget buildRightArrowButtonTL(BuildContext context) {
   return Positioned(
     top: MediaQuery.of(context).size.height * 0.5,
@@ -68,14 +65,12 @@ Widget buildRightArrowButtonTL(BuildContext context) {
         Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            transitionDuration:
-                const Duration(seconds: 1), // 2 segundos de duración
+            transitionDuration: const Duration(seconds: 1),
             pageBuilder: (context, animation, secondaryAnimation) {
               return const ActressAgain();
             },
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
-              // Fade + Slide (deslizar desde la derecha)
               var fadeAnimation =
                   animation.drive(CurveTween(curve: Curves.easeInOut));
               var slideAnimation =
@@ -94,7 +89,6 @@ Widget buildRightArrowButtonTL(BuildContext context) {
   );
 }
 
-// Método para la flecha izquierda de ActressAgain a TypeLumina
 Widget buildLeftArrowButtonAACC(BuildContext context) {
   return Positioned(
     top: MediaQuery.of(context).size.height * 0.5,
@@ -105,14 +99,12 @@ Widget buildLeftArrowButtonAACC(BuildContext context) {
         Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            transitionDuration:
-                const Duration(seconds: 1), // 2 segundos de duración
+            transitionDuration: const Duration(seconds: 1),
             pageBuilder: (context, animation, secondaryAnimation) {
               return const TypeLumina();
             },
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
-              // Fade + Slide (deslizar desde la izquierda)
               var fadeAnimation =
                   animation.drive(CurveTween(curve: Curves.easeInOut));
               var slideAnimation =
@@ -127,6 +119,65 @@ Widget buildLeftArrowButtonAACC(BuildContext context) {
           ),
         );
       },
+    ),
+  );
+}
+
+Widget buildEnterButtonTL(BuildContext context) {
+  return Align(
+    alignment: const Alignment(0, 0.6),
+    child: ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const TlCharaSelection(),
+          ),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(color: Colors.white, width: 3),
+          borderRadius: BorderRadius.circular(40),
+        ),
+      ),
+      child: const Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            "ENTER",
+            style: TextStyle(fontSize: 24, color: Colors.white),
+          ),
+          SizedBox(width: 10),
+          Icon(Icons.arrow_forward, size: 30, color: Colors.white),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget buildEnterButtonAACC(BuildContext context) {
+  return Align(
+    alignment: Alignment(0, 0.6),
+    child: ElevatedButton.icon(
+      onPressed: () {},
+      icon: const Icon(Icons.arrow_back, size: 30, color: Colors.white),
+      label: const Text(
+        "ENTER",
+        style: TextStyle(fontSize: 24, color: Colors.white),
+      ),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(color: Colors.white, width: 3),
+          borderRadius: BorderRadius.circular(40),
+        ),
+      ),
     ),
   );
 }

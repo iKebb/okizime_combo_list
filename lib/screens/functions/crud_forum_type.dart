@@ -60,8 +60,8 @@ class _CrudForumTypeState extends State<CrudForumType> {
               style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 labelText: editingIndex == null
-                    ? 'Escribe un comentario...'
-                    : 'Edita tu comentario...',
+                    ? 'Write a type!'
+                    : 'Editing right now...',
                 labelStyle: const TextStyle(color: Colors.white),
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),

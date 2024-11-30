@@ -110,6 +110,7 @@ flutter:
     - assets/videos/demos/MBTL_Demo_2.mp4
     - assets/videos/demos/MBAACC_Demo_1.mp4
     - assets/videos/demos/MBAACC_Demo_2.mp4
+    - assets/videos/demos/BG_Demo.mp4
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
