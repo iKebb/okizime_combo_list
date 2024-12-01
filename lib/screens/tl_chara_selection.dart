@@ -3,7 +3,7 @@ import 'package:ab_final_entregable/data/data.dart';
 import 'dart:ui';
 
 class TlCharaSelection extends StatelessWidget {
-  const TlCharaSelection({Key? key}) : super(key: key);
+  const TlCharaSelection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class TlCharaSelection extends StatelessWidget {
                   runSpacing: 10,
                   alignment: WrapAlignment.center,
                   children: characterData.map((character) {
-                    return Container(
+                    return SizedBox(
                       width: 180,
                       height: 395,
                       child: Card(

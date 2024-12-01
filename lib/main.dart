@@ -20,8 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       debugShowCheckedModeBanner: false,
-      title: 'Type Lumina',
+      title: "Okizime",
       theme: ThemeData.dark(),
       home: const TypeLumina(),
     );

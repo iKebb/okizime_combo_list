@@ -3,12 +3,14 @@ import 'package:provider/provider.dart';
 import 'forum_provider.dart';
 
 class CrudForumType extends StatefulWidget {
+  const CrudForumType({super.key});
+
   @override
   _CrudForumTypeState createState() => _CrudForumTypeState();
 }
 
 class _CrudForumTypeState extends State<CrudForumType> {
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
   int? editingIndex;
 
   void addOrEditComment(BuildContext context) {
@@ -73,7 +75,7 @@ class _CrudForumTypeState extends State<CrudForumType> {
           const SizedBox(width: 10),
           IconButton(
             onPressed: () => addOrEditComment(context),
-            icon: Icon(Icons.arrow_forward),
+            icon: const Icon(Icons.arrow_forward),
           )
         ],
       ),

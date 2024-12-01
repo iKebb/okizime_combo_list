@@ -17,8 +17,8 @@ class _TypeLuminaState extends State<TypeLumina> {
   @override
   void initState() {
     super.initState();
-    _controller1 = initializeVideo('assets/videos/demos/MBTL_Demo_1.mp4');
-    _controller2 = initializeVideo('assets/videos/demos/MBTL_Demo_2.mp4');
+    _controller1 = loopingVideo('assets/videos/demos/MBTL_Demo_1.mp4');
+    _controller2 = loopingVideo('assets/videos/demos/MBTL_Demo_2.mp4');
   }
 
   @override
@@ -36,7 +36,7 @@ class _TypeLuminaState extends State<TypeLumina> {
         child: Column(
           children: [
             getTypeLumina(context),
-            const SizedBox(height: 2),
+            const SizedBox(height: 8),
             getBody(context, _controller1, _controller2),
           ],
         ),

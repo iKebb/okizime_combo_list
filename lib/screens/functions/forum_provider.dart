@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ForumProvider extends ChangeNotifier {
-  List<String> _comments = [];
+  final List<String> _comments = [];
 
   List<String> get comments => _comments;
 

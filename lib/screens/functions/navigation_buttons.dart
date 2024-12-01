@@ -74,7 +74,7 @@ Widget buildRightArrowButtonTL(BuildContext context) {
               var fadeAnimation =
                   animation.drive(CurveTween(curve: Curves.easeInOut));
               var slideAnimation =
-                  Tween(begin: Offset(1.0, 0.0), end: Offset.zero)
+                  Tween(begin: const Offset(1.0, 0.0), end: Offset.zero)
                       .chain(CurveTween(curve: Curves.easeInOut))
                       .animate(animation);
 
@@ -108,7 +108,7 @@ Widget buildLeftArrowButtonAACC(BuildContext context) {
               var fadeAnimation =
                   animation.drive(CurveTween(curve: Curves.easeInOut));
               var slideAnimation =
-                  Tween(begin: Offset(-1.0, 0.0), end: Offset.zero)
+                  Tween(begin: const Offset(-1.0, 0.0), end: Offset.zero)
                       .chain(CurveTween(curve: Curves.easeInOut))
                       .animate(animation);
 
@@ -161,7 +161,7 @@ Widget buildEnterButtonTL(BuildContext context) {
 
 Widget buildEnterButtonAACC(BuildContext context) {
   return Align(
-    alignment: Alignment(0, 0.6),
+    alignment: const Alignment(0, 0.6),
     child: ElevatedButton.icon(
       onPressed: () {},
       icon: const Icon(Icons.arrow_back, size: 30, color: Colors.white),

@@ -17,8 +17,8 @@ class _ActressAgainState extends State<ActressAgain> {
   @override
   void initState() {
     super.initState();
-    _controller1 = initializeVideo('assets/videos/demos/MBTL_Demo_1.mp4');
-    _controller2 = initializeVideo('assets/videos/demos/MBTL_Demo_2.mp4');
+    _controller1 = loopingVideo('assets/videos/demos/MBAACC_Demo_1.mp4');
+    _controller2 = loopingVideo('assets/videos/demos/MBAACC_Demo_2.mp4');
   }
 
   @override

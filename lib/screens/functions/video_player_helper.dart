@@ -1,6 +1,6 @@
 import 'package:video_player/video_player.dart';
 
-VideoPlayerController initializeVideo(String assetPath) {
+VideoPlayerController loopingVideo(String assetPath) {
   final controller = VideoPlayerController.asset(assetPath);
   controller.initialize().then((_) {
     controller
