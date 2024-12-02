@@ -1,7 +1,7 @@
 import 'package:ab_final_entregable/widgets/content.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:ab_final_entregable/widgets/video_player_helper.dart';
+import 'package:ab_final_entregable/widgets/video_player_controller.dart';
 
 class ActressAgain extends StatefulWidget {
   const ActressAgain({super.key});

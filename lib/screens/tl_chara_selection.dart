@@ -9,6 +9,11 @@ class TlCharaSelection extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
 
+//ESTE CÓDIGO NECESITA SER OPTIMIZADO Y RETOCADO
+//ESTE CÓDIGO NECESITA SER OPTIMIZADO Y RETOCADO
+//ESTE CÓDIGO NECESITA SER OPTIMIZADO Y RETOCADO
+//ESTE CÓDIGO NECESITA SER OPTIMIZADO Y RETOCADO
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
@@ -33,6 +38,11 @@ class TlCharaSelection extends StatelessWidget {
                         colors: [
                           Colors.black.withOpacity(0.8),
                           Colors.transparent,
+                          //TRASPASAR EL FONDO BLURREADO A UNA FUNCIÓN CALLEABLE
+                          //TRASPASAR EL FONDO BLURREADO A UNA FUNCIÓN CALLEABLE
+                          //FUNCIÓN blurrBackgroundTL
+                          //TRASPASAR EL FONDO BLURREADO A UNA FUNCIÓN CALLEABLE
+                          //TRASPASAR EL FONDO BLURREADO A UNA FUNCIÓN CALLEABLE
                         ],
                       ),
                     ),
@@ -74,6 +84,9 @@ class TlCharaSelection extends StatelessWidget {
                                 color: Colors.white,
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
+                                //TRASPASAR EL USAGE DE CARDS POR DATA
+                                //A UNA FUNCIÓN CALLEABLE DENTRO DEL WIDGET
+                                //CONTENT.DART
                               ),
                             ),
                           ],
@@ -92,6 +105,7 @@ class TlCharaSelection extends StatelessWidget {
               icon: const Icon(Icons.arrow_back, color: Colors.white, size: 32),
               onPressed: () {
                 Navigator.pop(context);
+                //EL BOTÓN SERÁ HECHO UN WIDGET Y LLEVADO A LOS NAVIGATION_BUTTONS
               },
             ),
           ),
