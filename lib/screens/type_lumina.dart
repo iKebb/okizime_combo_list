@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:ab_final_entregable/screens/functions/content.dart';
-import 'package:ab_final_entregable/screens/functions/video_player_helper.dart';
+import 'package:ab_final_entregable/widgets/content.dart';
+import 'package:ab_final_entregable/widgets/video_player_helper.dart';
 
 class TypeLumina extends StatefulWidget {
   const TypeLumina({super.key});

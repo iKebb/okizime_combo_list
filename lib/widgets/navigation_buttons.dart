@@ -1,4 +1,4 @@
-import 'package:ab_final_entregable/screens/functions/full_screen_image.dart';
+import 'package:ab_final_entregable/widgets/full_screen_image.dart';
 import 'package:ab_final_entregable/screens/tl_chara_selection.dart';
 import 'package:flutter/material.dart';
 import 'package:ab_final_entregable/screens/type_lumina.dart';

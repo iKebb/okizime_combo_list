@@ -1,4 +1,4 @@
-import 'package:ab_final_entregable/screens/functions/forum_provider.dart';
+import 'package:ab_final_entregable/widgets/forum_provider.dart';
 import 'package:ab_final_entregable/screens/type_lumina.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

@@ -1,16 +1,16 @@
-import 'package:ab_final_entregable/screens/functions/content.dart';
+import 'package:ab_final_entregable/widgets/content.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:ab_final_entregable/screens/functions/video_player_helper.dart';
+import 'package:ab_final_entregable/widgets/video_player_helper.dart';
 
 class ActressAgain extends StatefulWidget {
   const ActressAgain({super.key});
 
   @override
-  _ActressAgainState createState() => _ActressAgainState();
+  ActressAgainState createState() => ActressAgainState();
 }
 
-class _ActressAgainState extends State<ActressAgain> {
+class ActressAgainState extends State<ActressAgain> {
   late final VideoPlayerController _controller1;
   late final VideoPlayerController _controller2;
 

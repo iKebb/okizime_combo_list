@@ -17,7 +17,7 @@ Widget buildVideoPlayer(
       decoration: BoxDecoration(
         color: Colors.black,
         borderRadius: BorderRadius.circular(
-          28,
+          8,
         ),
         border: Border.all(
           color: Colors.black,
@@ -26,17 +26,25 @@ Widget buildVideoPlayer(
       ),
       //boxdecoration para el marco del vídeo.
       child: FutureBuilder<void>(
-        // 
+        //función asíncrona que inicializa el controlador del vídeo (controller)
+        //es asíncrona pq flutter no permite operaciones bloqueantes en la UI.
         future: controller.initialize(),
         builder: (context, snapshot) {
+          //constructor de la pantalla que describe como se muestra la UI
+          //en función del estado del Future.
           if (snapshot.connectionState == ConnectionState.done) {
+            //se verifica si el estado de Future muestra el éxito de la operación
+            //(buildear la pantalla).
             return ClipRRect(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(28),
               child: VideoPlayer(controller),
+              //envuelve el vídeo gestionado por videoplayer(controller) en
+              //borderRadius.circular manejado por la clase clipRRect.
             );
           }
           return const Center(
             child: CircularProgressIndicator(),
+            //indicador de carga en el vídeo.
           );
         },
       ),

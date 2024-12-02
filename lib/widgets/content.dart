@@ -1,7 +1,7 @@
-import 'package:ab_final_entregable/screens/functions/backgrounds.dart';
-import 'package:ab_final_entregable/screens/functions/crud_forum_type.dart';
-import 'package:ab_final_entregable/screens/functions/custom_video_player.dart';
-import 'package:ab_final_entregable/screens/functions/navigation_buttons.dart';
+import 'package:ab_final_entregable/widgets/backgrounds.dart';
+import 'package:ab_final_entregable/widgets/crud_forum_type.dart';
+import 'package:ab_final_entregable/widgets/custom_video_player.dart';
+import 'package:ab_final_entregable/widgets/navigation_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 

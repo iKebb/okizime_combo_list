@@ -6,17 +6,20 @@ class CrudForumType extends StatefulWidget {
   const CrudForumType({super.key});
 
   @override
-  _CrudForumTypeState createState() => _CrudForumTypeState();
+  CrudForumTypeState createState() => CrudForumTypeState();
 }
 
-class _CrudForumTypeState extends State<CrudForumType> {
+class CrudForumTypeState extends State<CrudForumType> {
   final TextEditingController _controller = TextEditingController();
   int? editingIndex;
 
   void addOrEditComment(BuildContext context) {
     if (_controller.text.isEmpty) return;
+    //si _controller no tiene datos devuelve nada.
 
     final forumProvider = Provider.of<ForumProvider>(context, listen: false);
+    //obtiene el provider de forumProvider desde el context
+    //listen: false indica que no se hará escucha dentro de la UI 
 
     if (editingIndex == null) {
       forumProvider.addComment(_controller.text);
@@ -25,14 +28,17 @@ class _CrudForumTypeState extends State<CrudForumType> {
       editingIndex = null;
     }
     _controller.clear();
+    //limpia el contenido de la caja de texto cuando se edita o crea el comentario.
   }
 
   void editComment(BuildContext context, int index) {
-    setState(() {
-      editingIndex = index;
-      _controller.text =
-          Provider.of<ForumProvider>(context, listen: false).comments[index];
-    });
+    setState(
+      () {
+        editingIndex = index;
+        _controller.text =
+            Provider.of<ForumProvider>(context, listen: false).comments[index];
+      },
+    );
   }
 
   @override
