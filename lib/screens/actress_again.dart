@@ -36,7 +36,7 @@ class _ActressAgainState extends State<ActressAgain> {
         child: Column(
           children: [
             getActressAgain(context),
-            const SizedBox(height: 2),
+            const SizedBox(height: 8),
             getBody(context, _controller1, _controller2),
           ],
         ),

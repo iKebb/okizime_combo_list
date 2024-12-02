@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget buildBackgroundMBTL(BuildContext context) {
+Widget buildBackgroundMBTL() {
   return Container(
     decoration: const BoxDecoration(
       image: DecorationImage(
@@ -23,7 +23,7 @@ Widget buildBackgroundMBTL(BuildContext context) {
   );
 }
 
-Widget buildBackgroundMBAACC(BuildContext context) {
+Widget buildBackgroundMBAACC() {
   return Container(
     decoration: const BoxDecoration(
       image: DecorationImage(

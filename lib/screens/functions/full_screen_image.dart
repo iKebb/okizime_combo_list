@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class FullScreenImage extends StatelessWidget {
   final String imagePath;
+  //imagePath se declara como parámetros del constructor
 
   const FullScreenImage({super.key, required this.imagePath});
 
@@ -12,13 +13,20 @@ class FullScreenImage extends StatelessWidget {
       body: Stack(
         children: [
           Center(
-            child: Image.asset(imagePath, fit: BoxFit.contain),
+            child: Image.asset(
+              imagePath,
+              fit: BoxFit.contain,
+            ),
           ),
           Positioned(
             top: 12,
             left: 16,
             child: IconButton(
-              icon: const Icon(Icons.arrow_back, color: Colors.white, size: 32),
+              icon: const Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+                size: 32,
+              ),
               onPressed: () => Navigator.pop(context),
             ),
           ),

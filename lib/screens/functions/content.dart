@@ -1,4 +1,4 @@
-import 'package:ab_final_entregable/screens/functions/background_widget.dart';
+import 'package:ab_final_entregable/screens/functions/backgrounds.dart';
 import 'package:ab_final_entregable/screens/functions/crud_forum_type.dart';
 import 'package:ab_final_entregable/screens/functions/custom_video_player.dart';
 import 'package:ab_final_entregable/screens/functions/navigation_buttons.dart';
@@ -8,14 +8,23 @@ import 'package:video_player/video_player.dart';
 Widget getTypeLumina(BuildContext context) {
   final screenHeight = MediaQuery.of(context).size.height;
   final screenWidth = MediaQuery.of(context).size.width;
+  //MediaQuery se utiliza para obtener el tamaño de la pantalla
+  //donde la app se ejecuta.
+  //se utiliza final porque no queremos que estas dimensiones se reasignen
+  //en parte por optimizar en parte porque no tiene sentido que lo haga.
+  //EL CÓDIGO ES IGUAL PARA getActressAgain.
 
   return SizedBox(
     height: screenHeight,
     width: screenWidth,
+    //se emplean las variables definidas con MediaQuery.of(context)
+    //para asignar el tamaño del SizedBox. 
     child: Stack(
+      //se stackean los botones en la pantalla para poder ser interactuables. 
       fit: StackFit.expand,
+      //se expande el contenido que está stackeado sobre el sizedbox.
       children: [
-        buildBackgroundMBTL(context),
+        buildBackgroundMBTL(),
         buildEnterButtonTL(context),
         buildBackButton(context),
         buildExpandImageButtonTL(context),
@@ -35,7 +44,7 @@ Widget getActressAgain(BuildContext context) {
     child: Stack(
       fit: StackFit.expand,
       children: [
-        buildBackgroundMBAACC(context),
+        buildBackgroundMBAACC(),
         buildEnterButtonAACC(context),
         buildBackButton(context),
         buildExpandImageButtonAACC(context),
@@ -65,7 +74,10 @@ Widget getBody(
         ),
       ),
       const SizedBox(height: 20),
-      SizedBox(height: 400, child: CrudForumType()),
+      const SizedBox(
+        height: 400,
+        child: CrudForumType(),
+      ),
     ],
   );
 }
