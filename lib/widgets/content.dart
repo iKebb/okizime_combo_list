@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:ab_final_entregable/widgets/backgrounds.dart';
 import 'package:ab_final_entregable/widgets/crud_forum_type.dart';
 import 'package:ab_final_entregable/widgets/custom_video_player.dart';
@@ -18,9 +20,9 @@ Widget getTypeLumina(BuildContext context) {
     height: screenHeight,
     width: screenWidth,
     //se emplean las variables definidas con MediaQuery.of(context)
-    //para asignar el tamaño del SizedBox. 
+    //para asignar el tamaño del SizedBox.
     child: Stack(
-      //se stackean los botones en la pantalla para poder ser interactuables. 
+      //se stackean los botones en la pantalla para poder ser interactuables.
       fit: StackFit.expand,
       //se expande el contenido que está stackeado sobre el sizedbox.
       children: [

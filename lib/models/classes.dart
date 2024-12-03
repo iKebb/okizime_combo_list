@@ -5,6 +5,7 @@ class Move {
   final String description;
 
   Move({required this.inputname, required this.description});
+  //clase para editar movimientos, aún sin uso.
 }
 
 class Character {

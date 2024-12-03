@@ -2,6 +2,8 @@ import 'package:ab_final_entregable/widgets/forum_provider.dart';
 import 'package:ab_final_entregable/screens/type_lumina.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+//Repositorio github actualizado y público:
+//https://github.com/iKebb/okizime_combo_list
 
 void main() {
   runApp(
